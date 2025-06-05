@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css position property</title>
+    <style>
+        .container{
+            /* background-color: aquamarine; */
+            border: 2px solid black;
+            /* padding: 30px; */
+            height: 8000px;
+        }
+        img{
+            margin: 10px;
+        }
+        .box2{
+            /* position: relative;
+            top: 50px; */
+            position: absolute;
+            top: 100px;
+        }
+        .box4{
+            position:fixed;
+        }
+        .box3{
+            position: sticky;
+            top: 0;
+        }
+        .box{
+           background-color: aquamarine;
+           height: 7000px;
+            /* background-color: rgba(255, 0, 0, 0.5); */
+            /* background-color: rgba(255, 0, 0, 0.2); */
+            /* background-color: rgba(255, 0, 0, 0.1); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img1.png" class="box1" alt="cr7">
+        <img src="img2.png" class="box2" alt="cr7">
+        <img src="img3.png" class="box3" alt="cr7">
+        <img src="img4.png" class="box4" alt="cr7">
+    </div>
+    <div class="box">
+        
+    </div>
+</body>
+</html>

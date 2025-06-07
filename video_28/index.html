@@ -18,31 +18,28 @@
             /* position: relative; */
         }
         .box {
-            width: 100px;
-            height: 100px;
+            width: 350px;
+            height: 80px;
             background-color: coral;
             border-radius: 10px;
             margin: 10px;
             border: 3px solid black;
-            animation-name: rightMovement;
+            position: relative;
+            /* animation-name: rightMovement;
             position: relative;
             animation-duration: 5s;
             animation-iteration-count: 2;
             animation-delay: 2s;
             animation-timing-function: linear;
             /* animation-direction: alternate; */
-            animation-fill-mode: forwards;
+            /* animation-fill-mode: forwards; */ 
             /* animation-direction: reverse; */
             /* animation-direction: alternate-reverse; */
             /* shorthand animation property  easing-function | delay | iteration-count | direction | fil-mode |playstate */
             /* animation: rightMovement 5s linear 2s 2 alternate forwards; */
             /* animation: rightMovement 5s linear 2s 2 alternate-reverse forwards; */
-
-            
-
-            /* top: 0;
-            left: 0; */
-            /* animation: moveBox 5s infinite alternate ease-in-out; */
+            /* animation-play-state: running; */
+            animation: 5s linear 1s infinite alternate none running rightMovement;
         }
 
         @keyframes rightMovement{
@@ -53,29 +50,65 @@
             }
             to{
                 top:0;
-                left:800px;
+                left:1200px;
 
             }
         }
+         #box2{
+            width: 350px;
+            height: 80px;
+            background-color: coral;
+            border-radius: 10px;
+            margin: 10px;
+            border: 3px solid black;
+            position: relative;
+            animation: 5s linear 1s infinite alternate none running leftMovement;
+         }
+        @keyframes leftMovement{
+            from{
+                top:500px;
+                left:1200px;
 
-        /* /* .box {
+            }
+            to{
+                top:500px;
+                left:0;
+
+            }
+        }
+        #circle{
             width: 100px;
             height: 100px;
             background-color: coral;
-            position: absolute;
-            top: 0;
-            left: 0;
-            animation: moveBox 5s infinite alternate ease-in-out;
-        } */
+            border-radius: 50%;
+            margin: 10px;
+            border: 3px solid black;
+            position: relative;
+            top: 100px;
+            left: 600px;
+            animation: 10s linear 0s infinite alternate none running circleMovement;
+        }
+        @keyframes circleMovement{
+            0%{
+                top:1%;
+                left: 5%;
+            }
+            30%{
+                top: 5%;
+                left: 50%;
 
-        /* @keyframes moveBox {
-            from {
-                transform: translate(0, 0);
             }
-            to {
-                transform: translate(300px, 300px);
+            60%{
+                top: 60%;
+                left: 10%;
             }
-        } */ 
+            100%{
+                top: 40%;
+                left: 80%;
+
+            }
+
+        }
     </style>
 </head>
 <body>
@@ -83,7 +116,12 @@
         <div class="box">
 
         </div>
+       <div id="box2">
 
+       </div>
+       <div id="circle">
+
+       </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%; 
+            height: 100vh;
+            /* min-height: 900px; */
+           background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(30, 135, 89, 1) 0%, rgba(140, 209, 169, 1) 100%, rgba(237, 221, 83, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(51, 44, 44, 0.22); */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        }
+        .card img{
+            width: 100%;
+            height: 40%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            /* object-fit: cover; */
+        }
+        .textBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            /* padding: 20px; */
+            width: 75%;
+            text-align: center;
+        }
+        #amountbox{
+            width: 80%;
+            height: 10%;
+            background-color: #66ccda9b;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        .leftbox{
+            height: 100%;
+            width: fit-content;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+        }
+        .imgbox img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .rightbox{
+
+
+        }
+        #paymentbutton{
+            width: 80%;
+            height: 9%;
+            background-color: rgb(7, 7, 60);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            cursor: pointer;
+        }
+        .cancelbox a{
+            text-decoration: none;
+            color: rgb(37, 33, 33);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="icon.jpg" alt="">
+           <div class="textBox">
+             <h2>Order Summary</h2>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ratione quasi nobis nisi quos et. Culpa pariatur? </p>
+
+           </div>
+           <div id="amountbox">
+            <div class="leftbox">
+                <div class="imgbox">
+                    <img src="music.png" alt="">
+                </div>
+                <div class="textamountbox">
+                    <p>Amount</p>
+                    <p>$99.9/year</p>
+                </div>
+
+            </div>
+            <div class="rightbox">
+                <a href="#">Change</a>
+            </div>
+
+           </div>
+           <button id="paymentbutton">
+            Proceed to Payment
+           </button>
+           <div class="cancelbox">
+            <a href="#">Cancel Order</a>
+           </div>
+        </div>
+
+    </div>
+</body>
+</html>

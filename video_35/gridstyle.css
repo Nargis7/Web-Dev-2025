@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height:100%;
+    width: 100%;
+    display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     grid-template-rows: repeat(4, 200px);  
+    gap: 0.4rem;
+    padding : 4rem;
+    background-color: #1c1919;
+    border: 2px solid #c4b9b9;
+}
+.item{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(7, 123, 9);
+    border: 5px solid #a88e8e;
+    /* justify-self: stretch; center start end stretch  */
+    /* align-self: stretch; justify-self: center;  end start */
+    place-self: center; /*  instead of justify and align used this */
+    
+
+}

@@ -20,6 +20,7 @@ box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
 }
 
 .testimonial-container {
+  /* border: 2px solid black; */
   max-width: 1300px;
   height: 570px;
   margin: auto;
@@ -27,12 +28,13 @@ box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 /* Left side */
 .testimonial-left {
-  flex: 2 1 50%;
+  flex: 1 1 50%;
+  max-width: 500px;
 }
 
 .icon-title {
@@ -42,7 +44,7 @@ box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
 }
 
 .icon-circle {
-  background-color:#F5C044;
+  background-color:#f1ec56;
   color: white;
   font-size: 18px;
   width: 40px;
@@ -52,6 +54,8 @@ box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
   align-items: center;
   justify-content: center;
   margin-right: 12px;
+  font-size: 32px;
+ 
 }
 
 .section-title {
@@ -64,6 +68,7 @@ box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
   font-size: 16px;
   line-height: 1.6;
   color: #666;
+  max-width: 460px;
 }
 
 .checklist {
@@ -94,20 +99,33 @@ box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
   padding: 20px;
-  width: 100%;
-  max-width: 360px;
+  /* width: 100%; */
+  /* max-width: 360px; */
+  width: 40%;
+  max-width: 400px;
   transition: transform 0.3s ease;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 /* Offset the second card */
-.testimonial-card:nth-child(2) {
+/* .testimonial-card:nth-child(2) {
   position: relative;
   left: 40px;
   top: 20px;
+} */
+.testimonial-card:nth-child(1) {
+  position: relative;
+  top: 10px;
+  left: 150px;
+}
+
+.testimonial-card:nth-child(2) {
+  position: relative;
+  top: -5px;
+  left: -20px;
 }
 
 /* Card content */

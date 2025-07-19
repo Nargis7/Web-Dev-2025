@@ -64,8 +64,36 @@
 // console.log(myIdElem); // Prints the element with id "myId"
 // let firstPara = document.querySelectorAll("p");
 // console.log(firstPara); // Prints the first <p> element
-let firstPara = document.querySelector("p");
-console.log(firstPara); // Prints the first <p> element
+// let firstPara = document.querySelector("p");
+// console.log(firstPara); // Prints the first <p> element
+
+// let div = document.querySelector("div");
+// console.dir(div); // Prints the first <div> element
+
+// let heading = document.querySelector("h1");
+
+// let h2 = document.querySelector("h2");
+// console.dir(h2.innerText); 
+// h2.innerText = h2.innerText + " from apna college students"; 
+
+// Prints the first <h2> 
+
+let divs = document.querySelectorAll(".box");
+// console.log(divs[0]); 
+// // Prints all elements with class "box"
+let idx = 1;
+for(let div of divs) {
+    // console.log(div);
+    // console.dir(div.innerText);
+    div.innerText =     `nargis div ${idx}`; // Updates text of each div
+    idx++;
+}
+// divs[0].innerText = "Updated first div";
+//  // Updates text of the first div
+//  divs[1].innerText = "Updated second div"; // Updates text of the second div
+//  divs[2].innerText = "Updated third div"; // Updates text of the third div
+
+
 
 
 

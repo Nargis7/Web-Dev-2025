@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offline Joke Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+    #joke {
+      font-size: 1.4rem;
+      margin: 20px;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #cc5200;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>😂 Offline Joke Generator</h1>
+  <div id="joke">Click the button to get a joke!</div>
+  <button onclick="showJoke()">Get Joke</button>
+
+  <script>
+    const jokes = [
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "What do you call fake spaghetti? An impasta!",
+      "Why did the math book look sad? Because it had too many problems.",
+      "I told my computer I needed a break, and it said no problem — it’ll go to sleep.",
+      "Why can't your nose be 12 inches long? Because then it would be a foot!",
+  "टीचर: बताओ सबसे तेज़ क्या है? \nस्टूडेंट: सोचना, एक सेकंड में दुनिया घूम लेता है!",
+  "पप्पू डॉक्टर के पास गया, बोला: डॉक्टर साहब मुझे भूलने की बीमारी हो गई है। \nडॉक्टर: कब से? \nपप्पू: कब से क्या?",
+  "राजू: मुझे लड़कियों से डर लगता है। \nटीचर: क्यों? \nराजू: माँ कहती है कोरोना से दूर रहो!",
+  "मोहन: मम्मी भूख लगी है! \nमम्मी: फ्रिज में पराठा है \nमोहन: फ्रिज में तो सिर्फ आइसक्रीम है! \nमम्मी: तो समझदार बन और उसी से काम चला ले!",
+  "टीचर: 1 साल में कितने हफ्ते होते हैं? \nगोलू: सर, 52 Sundays और Monday-Friday tension!",
+  "प्योन: सर चाय! \nबॉस: अरे वाह, क्या बात है! \nप्योन: सर चाय नहीं, चाय खत्म!",
+  "बच्चा: पापा मुझे नयी साइकिल चाहिए। \nपापा: क्यों? \nबच्चा: क्यूंकि पुरानी अब स्कूटर बनाना है!",
+  "राज: तुम रो क्यों रही हो? \nसीमा: मम्मी ने मुझसे कहा कि किसी काम की नहीं हो! \nराज: तो रो क्यों रही हो? मम्मी तो सच्चाई बोल रही है!",
+  "टीचर: जो लोग पढ़ते हैं वही आगे बढ़ते हैं। \nबच्चा: फिर तो मोबाइल नंबर भी आगे बढ़ता है!",
+  "बॉस: आज तुम ऑफिस क्यों नहीं आए थे? \nकर्मचारी: सर, मैं सपने में काम कर रहा था, थक गया था!",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "What do you call cheese that isn't yours? Nacho cheese!",
+        "Why did the bicycle fall over? Because it was two-tired!",
+        "I used to play piano by ear, but now I use my hands.",
+        "Why don’t skeletons fight each other? They don’t have the guts!"
+  ];
+     //👉 Yeh ek array hai jisme kuch funny jokes hain
+       const colors = [
+      "#fce38a", "#f38181", "#a8edea", "#b5ead7",
+      "#f5c6ec", "#dcedc1", "#c3f584", "#c7ceea"
+    ];
+    function showJoke() { //👉 showJoke() function define kar rahe hain
+      const randomIndex = Math.floor(Math.random() * jokes.length); //👉 Yeh line ek random number generate karti hai (0 se jokes.length-1 tak)
+// 👉 Math.random() → gives decimal (0 to 1)
+// 👉 Math.floor() → rounds it down to whole number
+
+// 📌 Example: Agar array me 5 jokes hain → index 0 to 4
+      document.getElementById("joke").textContent = jokes[randomIndex]; //👉 textContent change karke usme random joke daal rahe hain 
+       // Change background color randomly
+      const colorIndex = Math.floor(Math.random() * colors.length);
+      document.body.style.backgroundColor = colors[colorIndex];
+    }
+  </script>
+
+</body>
+</html>

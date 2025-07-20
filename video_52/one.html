@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Cat Fact & Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐱 Random Cat Fact & Image</h1>
+  <p id="fact">Click the button to get a cat fact!</p>
+  <img id="cat-img" src="https://cataas.com/cat" alt="Random Cat" />
+  <br>
+  <button onclick="getFacts()">Get New Cat</button>
+
+  <script>
+    const factPara = document.querySelector("#fact");
+    const catImg = document.querySelector("#cat-img");
+    const factURL = "https://catfact.ninja/fact";
+    const catImgURL = "https://cataas.com/cat?timestamp="; // To prevent caching
+
+    const getFacts = async () => {
+      try {
+        // Get cat fact
+        const response = await fetch(factURL);
+        const data = await response.json();
+        factPara.innerText = data.fact;
+
+        // Get new cat image
+        catImg.src = catImgURL + new Date().getTime();
+      } catch (error) {
+        factPara.innerText = "Could not load cat fact.";
+        console.error("Error:", error);
+      }
+    };
+  </script>
+</body>
+</html>
